@@ -26,4 +26,10 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install essential KDE components
-sudo pacman -S gwenview okular kwallet
+sudo pacman -S gwenview okular kwallet kdeconnect
+
+# Install Flatpak
+sudo pacman -S flatpak
+
+# Install Firefox
+sudo pacman -S firefox
