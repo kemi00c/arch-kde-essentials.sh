@@ -18,15 +18,26 @@ yay pamac-tray-icon-plasma
 # Install Plymouth splash screen
 sudo pacman -S plymouth plymouth-kcm
 
+# Install os-prober
+sudo pacman -S os-prober
+
 # Configure the splash screen in the boot parameters
 if ! grep -q "GRUB_CMDLINE_LINUX_DEFAULT.*splash" /etc/default/grub
 then
     sudo sed -i "s/\(GRUB_CMDLINE_LINUX_DEFAULT=\"[^\"]*\)/\1 splash/" /etc/default/grub
 fi
+
+# Enable OS Prober
+if grep -q "^#GRUB_DISABLE_OS_PROBER=false" /etc/dafault/grub
+then
+    sudo sed -i "s/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/" /etc/default/grub
+fi
+
+# Update GRUB config
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install essential KDE components
-sudo pacman -S gwenview okular kwallet kdeconnect
+sudo pacman -S gwenview okular kwallet kwalletmanager kdeconnect
 
 # Install Flatpak
 sudo pacman -S flatpak
