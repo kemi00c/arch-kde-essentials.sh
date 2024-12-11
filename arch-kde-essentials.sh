@@ -16,5 +16,14 @@ yay pamac-aur
 yay pamac-tray-icon-plasma
 
 # Install Plymouth splash screen
-sudo pacman -S plymouth
-sudo pacman -S plymouth-kcm
+sudo pacman -S plymouth plymouth-kcm
+
+# Configure the splash screen in the boot parameters
+if ! grep -q "GRUB_CMDLINE_LINUX_DEFAULT.*splash" /etc/default/grub
+then
+    sudo sed -i "s/\(GRUB_CMDLINE_LINUX_DEFAULT=\"[^\"]*\)/\1 splash/" /etc/default/grub
+fi
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+# Install essential KDE components
+sudo pacman -S gwenview okular kwallet
