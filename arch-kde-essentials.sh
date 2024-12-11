@@ -28,7 +28,7 @@ then
 fi
 
 # Enable OS Prober
-if grep -q "^#GRUB_DISABLE_OS_PROBER=false" /etc/dafault/grub
+if grep -q "^#GRUB_DISABLE_OS_PROBER=false" /etc/default/grub
 then
     sudo sed -i "s/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/" /etc/default/grub
 fi
