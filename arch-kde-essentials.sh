@@ -1,25 +1,24 @@
 #!/bin/bash
 
 # Update package database
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 # Install yay AUR package manager
-sudo pacman -S --needed base-devel git
+sudo pacman -S --needed --noconfirm base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 rm -rf yay
 
 # Install pamac GUI package manager
-yay pamac-aur
-yay pamac-tray-icon-plasma
+yay -S --noconfirm pamac-aur pamac-tray-icon-plasma
 
 # Install Plymouth splash screen
-sudo pacman -S plymouth plymouth-kcm
+sudo pacman -S --noconfirm plymouth plymouth-kcm
 
 # Install os-prober
-sudo pacman -S os-prober
+sudo pacman -S --noconfirm os-prober
 
 # Configure the splash screen in the boot parameters
 if ! grep -q "GRUB_CMDLINE_LINUX_DEFAULT.*splash" /etc/default/grub
@@ -37,10 +36,12 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install essential KDE components
-sudo pacman -S gwenview okular kwallet kwalletmanager kdeconnect
+sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect
 
 # Install Flatpak
-sudo pacman -S flatpak
+sudo pacman -S --noconfirm flatpak
 
 # Install Firefox
-sudo pacman -S firefox
+sudo pacman -S --noconfirm firefox
+
+echo "Initial configuration and installation of essential packages completed. Please reboot your system now."
