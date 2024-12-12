@@ -41,6 +41,9 @@ sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect
 # Install Flatpak
 sudo pacman -S --noconfirm flatpak
 
+# Install the official Arch Linux wallpaper pack
+sudo pacman -S --noconfirm archlinux-wallpaper
+
 # Install Firefox
 sudo pacman -S --noconfirm firefox
 
