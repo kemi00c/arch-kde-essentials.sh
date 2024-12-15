@@ -44,6 +44,9 @@ sudo pacman -S --noconfirm noto-fonts-cjk
 # Install Flatpak
 sudo pacman -S --noconfirm flatpak
 
+# Install fuse2 (needed for running AppImages)
+sudo pacman -S --noconfirm fuse2
+
 # Install the official Arch Linux wallpaper pack
 sudo pacman -S --noconfirm archlinux-wallpaper
 
