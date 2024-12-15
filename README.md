@@ -8,6 +8,7 @@ This script configures and installs the following things:
 - Installs essential KDE apps: gwenview okular kwallet kwalletmanager kdeconnect and kcalc
 - Installs Chinese, Korean and Japanese fonts for better compatibility
 - Installs Flatpak
+- Installs fuse2 for AppImage support
 - Installs the official Arch Linux wallpaper pack
 - Installs Firefox
 
