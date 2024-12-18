@@ -47,6 +47,9 @@ sudo pacman -S --noconfirm flatpak
 # Install fuse2 (needed for running AppImages)
 sudo pacman -S --noconfirm fuse2
 
+# Install manual pages
+sudo pacman -S --noconfirm man-db
+
 # Install the official Arch Linux wallpaper pack
 sudo pacman -S --noconfirm archlinux-wallpaper
 
