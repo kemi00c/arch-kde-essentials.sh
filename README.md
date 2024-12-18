@@ -9,6 +9,7 @@ This script configures and installs the following things:
 - Installs Chinese, Korean and Japanese fonts for better compatibility
 - Installs Flatpak
 - Installs fuse2 for AppImage support
+- Installs manual pages
 - Installs the official Arch Linux wallpaper pack
 - Installs Firefox
 
