@@ -36,7 +36,7 @@ fi
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install essential KDE components
-sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect kcalc
+sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect kcalc spectacle
 
 # Install Chinese, Japanese, Korean fonts for compatibility
 sudo pacman -S --noconfirm noto-fonts-cjk
