@@ -56,4 +56,12 @@ sudo pacman -S --noconfirm archlinux-wallpaper
 # Install Firefox
 sudo pacman -S --noconfirm firefox
 
+# Install and configure services for printer support
+sudo pacman -S --noconfirm system-config-printer
+sudo pacman -S --noconfirm cups
+sudo systemctl enable avahi-daemon.service
+sudo systemctl start avahi-daemon.service
+sudo systemctl enable cups.service
+sudo systemctl start cups.service
+
 echo "Initial configuration and installation of essential packages completed. Please reboot your system now."
