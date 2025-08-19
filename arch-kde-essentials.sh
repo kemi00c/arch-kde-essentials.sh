@@ -32,6 +32,12 @@ then
     sudo sed -i "s/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/" /etc/default/grub
 fi
 
+# Enable saving last choice in GRUB
+if grep -q "^#GRUB_SAVEDEFAULT=true" /etc/default/grub
+then
+    sudo sed -i "s/^#GRUB_SAVEDEFAULT=true/GRUB_SAVEDEFAULT=true/" /etc/default/grub
+fi
+
 # Update GRUB config
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
