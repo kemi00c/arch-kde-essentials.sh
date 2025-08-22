@@ -33,6 +33,10 @@ then
 fi
 
 # Enable saving last choice in GRUB
+if grep -q "^GRUB_DEFAULT=0" /etc/default/grub
+then
+    sudo sed -i "s/^GRUB_DEFAULT=0/GRUB_DEFAULT=saved/" /etc/default/grub
+fi
 if grep -q "^#GRUB_SAVEDEFAULT=true" /etc/default/grub
 then
     sudo sed -i "s/^#GRUB_SAVEDEFAULT=true/GRUB_SAVEDEFAULT=true/" /etc/default/grub
