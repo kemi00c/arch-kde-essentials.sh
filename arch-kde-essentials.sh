@@ -11,8 +11,8 @@ makepkg -si --noconfirm
 cd ..
 rm -rf yay
 
-# Install pamac GUI package manager
-yay -S --noconfirm pamac-aur pamac-tray-icon-plasma
+# Install Octopi GUI package manager
+yay -S --noconfirm octopi
 
 # Install Plymouth splash screen
 sudo pacman -S --noconfirm plymouth plymouth-kcm
