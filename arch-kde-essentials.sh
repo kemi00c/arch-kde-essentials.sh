@@ -14,17 +14,8 @@ rm -rf yay
 # Install Octopi GUI package manager
 yay -S --noconfirm octopi
 
-# Install Plymouth splash screen
-sudo pacman -S --noconfirm plymouth plymouth-kcm
-
 # Install os-prober
 sudo pacman -S --noconfirm os-prober
-
-# Configure the splash screen in the boot parameters
-if ! grep -q "GRUB_CMDLINE_LINUX_DEFAULT.*splash" /etc/default/grub
-then
-    sudo sed -i "s/\(GRUB_CMDLINE_LINUX_DEFAULT=\"[^\"]*\)/\1 splash/" /etc/default/grub
-fi
 
 # Enable OS Prober
 if grep -q "^#GRUB_DISABLE_OS_PROBER=false" /etc/default/grub

@@ -2,7 +2,6 @@
 A script for initial configuration and essential packages for a fresh Arch Linux install with KDE Plasma desktop
 ## Overwiew
 This script configures and installs the following things:
-- Installs and configures Plymouth boot splash screen
 - Installs Octopi, a graphical package manager
 - Installs os-prober, enables OS probing in GRUB, adds other operating systems to the GRUB menu if any exists
 - Installs essential KDE apps: gwenview okular kwallet kwalletmanager kdeconnect and kcalc
