@@ -15,7 +15,7 @@ rm -rf yay
 yay -S --noconfirm octopi
 
 # Install essential KDE components
-sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect kcalc spectacle
+sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect kcalc spectacle konsole
 
 # Install Chinese, Japanese, Korean fonts for compatibility
 sudo pacman -S --noconfirm noto-fonts-cjk
