@@ -14,28 +14,6 @@ rm -rf yay
 # Install Octopi GUI package manager
 yay -S --noconfirm octopi
 
-# Install os-prober
-sudo pacman -S --noconfirm os-prober
-
-# Enable OS Prober
-if grep -q "^#GRUB_DISABLE_OS_PROBER=false" /etc/default/grub
-then
-    sudo sed -i "s/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/" /etc/default/grub
-fi
-
-# Enable saving last choice in GRUB
-if grep -q "^GRUB_DEFAULT=0" /etc/default/grub
-then
-    sudo sed -i "s/^GRUB_DEFAULT=0/GRUB_DEFAULT=saved/" /etc/default/grub
-fi
-if grep -q "^#GRUB_SAVEDEFAULT=true" /etc/default/grub
-then
-    sudo sed -i "s/^#GRUB_SAVEDEFAULT=true/GRUB_SAVEDEFAULT=true/" /etc/default/grub
-fi
-
-# Update GRUB config
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-
 # Install essential KDE components
 sudo pacman -S --noconfirm gwenview okular kwallet kwalletmanager kdeconnect kcalc spectacle
 
