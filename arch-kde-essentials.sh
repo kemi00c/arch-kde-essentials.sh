@@ -14,8 +14,8 @@ rm -rf yay
 # Install Octopi GUI package manager
 yay -S --noconfirm octopi
 
-# Install essential KDE components
-sudo pacman -S --noconfirm gwenview okular kdeconnect
+# Install KDE Connect
+sudo pacman -S --noconfirm kdeconnect
 
 # Install Chinese, Japanese, Korean fonts for compatibility
 sudo pacman -S --noconfirm noto-fonts-cjk
