@@ -32,7 +32,4 @@ sudo pacman -S --noconfirm man-db
 # Install the official Arch Linux wallpaper pack
 sudo pacman -S --noconfirm archlinux-wallpaper
 
-# Install Firefox
-sudo pacman -S --noconfirm firefox
-
 echo "Initial configuration and installation of essential packages completed. Please reboot your system now."
