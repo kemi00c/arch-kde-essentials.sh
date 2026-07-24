@@ -9,7 +9,6 @@ This script configures and installs the following things:
 - Installs fuse2 for AppImage support
 - Installs manual pages
 - Installs the official Arch Linux wallpaper pack
-- Installs Firefox
 
 ## Executing
 Execute this script as a normal user with administrator rights (sudoers).
