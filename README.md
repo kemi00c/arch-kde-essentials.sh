@@ -3,7 +3,7 @@ A script for initial configuration and essential packages for a fresh Arch Linux
 ## Overwiew
 This script configures and installs the following things:
 - Installs Octopi, a graphical package manager
-- Installs essential KDE apps: gwenview okular kdeconnect
+- Installs KDE Connect
 - Installs Chinese, Korean and Japanese fonts for better compatibility
 - Installs Flatpak
 - Installs fuse2 for AppImage support
