@@ -15,7 +15,7 @@ rm -rf yay
 yay -S --noconfirm octopi
 
 # Install KDE Connect
-sudo pacman -S --noconfirm kdeconnect
+sudo pacman -S --noconfirm kdeconnect sshfs
 
 # Install Chinese, Japanese, Korean fonts for compatibility
 sudo pacman -S --noconfirm noto-fonts-cjk
