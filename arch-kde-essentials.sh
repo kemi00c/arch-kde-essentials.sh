@@ -16,6 +16,9 @@ yay -S --noconfirm octopi
 
 # Install KDE Connect
 sudo pacman -S --noconfirm kdeconnect sshfs
+# Open firewall for KDE Connect
+sudo ufw allow 1714:1764/udp
+sudo ufw allow 1714:1764/tcp
 
 # Install Chinese, Japanese, Korean fonts for compatibility
 sudo pacman -S --noconfirm noto-fonts-cjk
